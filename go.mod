@@ -1,4 +1,4 @@
-module cdxlr
+module github.com/innomotics/cdxlr
 
 go 1.19
 
