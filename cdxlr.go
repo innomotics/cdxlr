@@ -68,7 +68,6 @@ func GenerateMapping(licenses *cyclonedx.Licenses) ([]string, error) {
 			return nil, fmt.Errorf("invalid license definition")
 		}
 	}
-	fmt.Println(licenseIds)
 	return licenseIds, nil
 }
 
