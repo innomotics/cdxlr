@@ -3,10 +3,10 @@ module github.com/innomotics/cdxlr
 go 1.19
 
 require (
-	github.com/CycloneDX/cyclonedx-go v0.7.2
+	github.com/CycloneDX/cyclonedx-go v0.9.0
 	github.com/adrg/strutil v0.3.1
 	github.com/github/go-spdx/v2 v2.2.0
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 )
 
 require (
