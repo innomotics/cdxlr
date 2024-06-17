@@ -46,8 +46,13 @@ type LicenseList struct {
 func (ll *LicenseList) FindByName(name string) (License, float64) {
 	var bestMatch License
 	var bestRating float64 = 0
+
 	compareMetric := metrics.NewJaroWinkler()
 	for _, l := range ll.Licenses {
+		if name == l.LicenseId {
+			// Wrong handling of CDX: ID as name
+			return l, 1
+		}
 		similarity := strutil.Similarity(name, l.Name, compareMetric)
 		if similarity >= SimilarityThreshold && similarity >= bestRating {
 			bestMatch = l

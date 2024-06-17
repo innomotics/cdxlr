@@ -56,6 +56,9 @@ func TestGenerateMapping(t *testing.T) {
 					Name: "Apache License 1.1",
 				}},
 				{License: &cyclonedx.License{
+					Name: "GPLv3+",
+				}},
+				{License: &cyclonedx.License{
 					URL: "https://spdx.org/licenses/BSD-4-Clause.html",
 				}},
 				{License: &cyclonedx.License{
@@ -66,7 +69,7 @@ func TestGenerateMapping(t *testing.T) {
 				}},
 				{Expression: "Ruby AND (SAX-PD OR LGPL-2.0-only WITH FLTK-Exception)"},
 			},
-			want:    []string{"MIT", "Apache-1.1", "BSD-4-Clause", "RHeCos-1.1", "MIT-Wu", "LGPL-2.0-only WITH FLTK-exception", "Ruby", "SAX-PD"},
+			want:    []string{"MIT", "Apache-1.1", "GPLv3+", "BSD-4-Clause", "RHeCos-1.1", "MIT-Wu", "LGPL-2.0-only WITH FLTK-exception", "Ruby", "SAX-PD"},
 			wantErr: assert.NoError,
 		},
 		{
